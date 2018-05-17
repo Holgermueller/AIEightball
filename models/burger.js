@@ -21,4 +21,4 @@ let burger = {
 };
 
 //export burger.js file
-module.exports = tbd;
+module.exports = burger;
