@@ -2,6 +2,9 @@
 const express = require('express');
 const bodyparser = require('body-parser');
 const exphb = require('express-handlebars');
+//remove later
+const mysql = require('mysql');
+const connection = require('./config/connection.js');
 
 //create port
 const PORT = process.env.PORT || 8080;

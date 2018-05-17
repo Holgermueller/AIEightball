@@ -1,5 +1,5 @@
 //require MySQL connection
-const connection = require('/Users/holgermueller/Desktop/Eat_a_burger/config/connection.js');
+const connection = require('./connection.js');
 //console.log(connection);
 
 //create helper funcitons for SQL syntax
@@ -24,7 +24,7 @@ function objToSql(ob) {
         }
     }
     return arr.toString();
-}
+};
 
 //create three methods to execute MySQL commands:
 let orm = {
