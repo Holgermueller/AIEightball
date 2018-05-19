@@ -13,10 +13,14 @@ const app = express();
 
 //leave space for other code
 
-
+//test get request
+connection.query('SELECT * FROM burgers', function(err, res) {
+    if (err) throw err;
+    console.log(res);
+})
 
 
 //start server
-app.listen(PORT,function() {
+app.listen(PORT, function () {
     console.log("Server listening on: http://localhost: " + PORT);
 });

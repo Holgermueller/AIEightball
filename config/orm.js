@@ -56,14 +56,14 @@ let orm = {
         }));
     },
     //updateOne()
-    update: function(table, objColVals, condition, cb) {
+    update: function (table, objColVals, condition, cb) {
         const queryString = "UPDATE " + table;
         queryString += " SET ";
         queryString += objToSql(objColVals);
         queryString += " WHERE ";
         queryString += condition;
         console.log(queryString);
-        connection.query(queryString, function(err, result) {
+        connection.query(queryString, function (err, result) {
             if (err) {
                 throw err;
             }
