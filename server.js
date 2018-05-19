@@ -14,32 +14,35 @@ const app = express();
 //leave space for other code
 
 //test mysql request
-// connection.query('SELECT * FROM burgers', function(err, res) {
-//     if (err) throw err;
-//     console.log(res);
-// })
+
 
 //test data
-let burgers = [
-    {
-        burger: "cheeseburger"
-    },
-    {
-        burger: "California Burger"
-    },
-    {
-        burger: "bacon cheeseburger"
-    }
-];
+// let burgers = [
+//     {
+//         burger: "cheeseburger"
+//     },
+//     {
+//         burger: "California Burger"
+//     },
+//     {
+//         burger: "bacon cheeseburger"
+//     }
+// ];
 
 //test get request
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 
-    app.get("/", function (req, res) {
-      res.render("index", {index: burgers});
-    });
+app.get("/", function (req, res) {
+    connection.query('SELECT * FROM burgers', function (err, result) {
+        if (err) throw err;
+        res.render("index");
+        for (let i = 0; i < result.length; i++) {
+            console.log(result[i].burger_name);
+        }
+    })
+});
 
 //end remove
 
