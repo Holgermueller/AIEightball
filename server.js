@@ -17,12 +17,10 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-//leave space for other code
+//routes
+const routes = require("./controllers/burgers_controllers.js")
 
-//test mysql request
 
-
-//test data
 
 
 //test get request
@@ -35,7 +33,7 @@ app.get("/", function (req, res) {
         if (err) throw err;
         res.render("index");
         for (let i = 0; i < result.length; i++) {
-            console.log(result[i].burger_name);
+            //console.log(result[i].burger_name);
             let name = result[i].burger_name;
             return name
         }    

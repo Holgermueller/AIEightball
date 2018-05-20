@@ -1,5 +1,5 @@
 //import orm.js
-const orm = require("./config/orm.js");
+const orm = require("../config/orm.js");
 
 //create code to call the ORM functions using "burger-specific" input from ORM file
 let burger = {
