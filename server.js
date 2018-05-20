@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 
 //routes
 const routes = require("./controllers/burgers_controllers.js")
-
+app.use(routes);
 
 
 

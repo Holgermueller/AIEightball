@@ -5,20 +5,20 @@
 <!--not eaten-->
 <h2>That looks tasty!</h2>
 
-{{#each index}}
-<p>{{name}}
+{{#each burgers}}
+<p>{{burger_name}}
     <button class="eat-burger" data-id="{{this.id}}">
         EAT IT!!
     </button>
 </p>
 {{/each}}
 
-
+<br>
 <!--eaten-->
 <h2>That was goooood!</h2>
 
 
-
+<br>
 <h2>Add a burger!</h2>
 <form class="create-form">
     <div class="form-group">
