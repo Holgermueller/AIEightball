@@ -1,6 +1,6 @@
 //require dependencies
 const express = require('express');
-const bodyparser = require('body-parser');
+const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 
 //remove later
@@ -11,23 +11,19 @@ const connection = require('./config/connection.js');
 const PORT = process.env.PORT || 8080;
 const app = express();
 
+app.use(express.static("public"));
+
+//bodyparser
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+
 //leave space for other code
 
 //test mysql request
 
 
 //test data
-// let burgers = [
-//     {
-//         burger: "cheeseburger"
-//     },
-//     {
-//         burger: "California Burger"
-//     },
-//     {
-//         burger: "bacon cheeseburger"
-//     }
-// ];
+
 
 //test get request
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
@@ -40,7 +36,9 @@ app.get("/", function (req, res) {
         res.render("index");
         for (let i = 0; i < result.length; i++) {
             console.log(result[i].burger_name);
-        }
+            let name = result[i].burger_name;
+            return name
+        }    
     })
 });
 
