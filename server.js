@@ -11,9 +11,10 @@ const connection = require('./config/connection.js');
 const PORT = process.env.PORT || 8080;
 const app = express();
 
+//use public folder
 app.use(express.static("public"));
 
-//bodyparser
+//use bodyparser
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
@@ -21,26 +22,9 @@ app.use(bodyParser.json());
 const routes = require("./controllers/burgers_controllers.js")
 app.use(routes);
 
-
-
-//test get request
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+
 app.set("view engine", "handlebars");
-
-
-app.get("/", function (req, res) {
-    connection.query('SELECT * FROM burgers', function (err, result) {
-        if (err) throw err;
-        res.render("index");
-        for (let i = 0; i < result.length; i++) {
-            //console.log(result[i].burger_name);
-            let name = result[i].burger_name;
-            return name
-        }    
-    })
-});
-
-//end remove
 
 //start server
 app.listen(PORT, function () {

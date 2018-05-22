@@ -1,3 +1,27 @@
 h1 {
-    color: red;
+    color: blue;
+    text-align: center;
 }
+
+li {
+    padding: 5px;
+}
+
+.create-form {
+    background-color: #F0CD59;
+    text-align: center;
+    margin-top: 30%;
+    margin-bottom: 5px;
+    padding: 3px;
+}
+
+.uneaten {
+    margin-left: 25px;
+    position: fixed;
+}
+
+.eaten {
+    margin-right: 25px;
+    float: right;
+}
+

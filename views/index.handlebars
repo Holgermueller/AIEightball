@@ -3,27 +3,26 @@
 
 <!--space for burgers-->
 <!--not eaten-->
+<div class="uneaten">
 <h2>That looks tasty!</h2>
 <ul>
-{{#each burgers}}
-{{#unless notDevoured}}
-{{> burgers/burger-block devoured=false}}
-{{/unless}}
-{{/each}}
+    {{#each burgers}} {{#unless nowDevoured}} {{> burgers/burger-block devoured=false}} {{/unless}} {{/each}}
 </ul>
+</div>
 
 <br>
 <!--eaten-->
+<div class="eaten">
 <h2>That was goooood!</h2>
 <ul>
     {{#each burgers}} {{#if devoured}} {{>burgers/burger-block devoured=true}} {{/if}} {{/each}}
 </ul>
+</div>
 
 <br>
 <!--form for creating burgers-->
-<br>
-<h2>Add a burger!</h2>
 <form class="create-form">
+    <h2>Add a burger!</h2>
     <div class="form-group">
         <label for="burger">Order a Burger:</label>
         <input type="text" id="burger" name="name">
