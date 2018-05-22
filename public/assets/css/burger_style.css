@@ -1,6 +1,14 @@
+body {
+    /*image from pexels*/
+    background-image: url('/img/pexels-photo-552056.jpeg');
+    background-size: cover;
+}
+
 h1 {
-    color: blue;
+    background-color: #F0CD59;
+    color: #010120;
     text-align: center;
+    border-radius: 50px;
 }
 
 li {
@@ -12,16 +20,27 @@ li {
     text-align: center;
     margin-top: 30%;
     margin-bottom: 5px;
-    padding: 3px;
+    margin-left: 33%;
+    padding-bottom: 3px;
+    border-radius: 50px;
+    width: 35%;
 }
 
 .uneaten {
     margin-left: 25px;
     position: fixed;
+    background-color: #F0CD59;
+    padding: 3px;
+    border-radius: 15%;
+    text-align: center;
 }
 
 .eaten {
     margin-right: 25px;
     float: right;
+    background-color: #F0CD59;
+    padding: 3px;
+    border-radius: 15%;
+    text-align: center;
 }
 
