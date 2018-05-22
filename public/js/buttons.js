@@ -4,7 +4,6 @@ $(function () {
     //function for adding new burgers
     $(".create-form").on("submit", function (event) {
         event.preventDefault();
-
         let newBurger = {
             burger_name: $("#burger").val().trim(),
             devoured: 0
@@ -26,7 +25,6 @@ $(function () {
     $(".devoured").on("click", function (event) {
         let id = $(this).data("id");
         let nowDevoured = $(this).data("devoured");
-
         let burgerNowDevoured = {
             devoured: 1
         };
@@ -41,7 +39,11 @@ $(function () {
                 location.reload();
             }
         );
-        //end put request function
+    });
+
+    //DELETE function for eaten burgers
+    $(".devoured").on("click", function(event){
+        $(this).parent().slideUp();
     });
 
     //no code below this line
