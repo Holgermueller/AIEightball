@@ -34,15 +34,11 @@ $(function () {
             type: "PUT",
             data: burgerNowDevoured
         }).then(
-            function() {
+            function () {
                 console.log("burger now eaten", nowDevoured);
                 location.reload();
             }
         );
-    });
-
-    //DELETE function for eaten burgers
-    $(".devoured").on("click", function(event){
     });
 
     //no code below this line
