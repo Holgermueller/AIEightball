@@ -25,13 +25,13 @@ router.post("/api/burgers", function (req, res) {
     ], [
             req.body.burger_name, req.body.devoured
         ], function (result) {
-            res.json({ id: result.indertId })
+            res.json({ burger_id: result.insertId })
         });
 });
 
 //PUT request route
-router.put("/api/burgers/:id", function(req, res){
-    let condition = "id = " +req.params.id;
+router.put("/api/burgers/:burger_id", function(req, res){
+    let condition = "burger_id = " + req.params.burger_id;
 
     console.log("condition", condition);
 

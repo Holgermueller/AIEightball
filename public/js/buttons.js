@@ -1,8 +1,8 @@
 'use strict';
 //event handlers for buttons
-$(function(){
+$(function () {
     //function for adding new burgers
-    $(".create-form").on("submit",function(event) {
+    $(".create-form").on("submit", function (event) {
         event.preventDefault();
 
         let newBurger = {
@@ -15,7 +15,7 @@ $(function(){
             type: "POST",
             data: newBurger
         }).then(
-            function(){
+            function () {
                 console.log("New Burger Added!!");
                 location.reload();
             }
@@ -23,7 +23,26 @@ $(function(){
     });
 
     //function for devouring burgers
-    $(".")
+    $(".devoured").on("click", function (event) {
+        let id = $(this).data("id");
+        let nowDevoured = $(this).data("devoured");
+
+        let burgerNowDevoured = {
+            devoured: 1
+        };
+
+        //send PUT request
+        $.ajax("/api/burgers/" + id, {
+            type: "PUT",
+            data: burgerNowDevoured
+        }).then(
+            function() {
+                console.log("burger now eaten", nowDevoured);
+                location.reload();
+            }
+        );
+        //end put request function
+    });
 
     //no code below this line
 });
