@@ -29,6 +29,7 @@ $(function () {
             devoured: 1
         };
         $(this).parent().remove("li");
+        $(this).prop("disabled", true);
 
         //send PUT request
         $.ajax("/api/burgers/" + id, {
