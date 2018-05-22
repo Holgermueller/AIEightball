@@ -17,7 +17,14 @@
 <!--eaten-->
 <h2>That was goooood!</h2>
 
+{{#each burgers}}
+    {{#if devoured}}
+        {{>burgers/burger-block devoured=true}}
+    {{/if}}
+{{/each}}
 
+<br>
+<!--form for creating burgers-->
 <br>
 <h2>Add a burger!</h2>
 <form class="create-form">
