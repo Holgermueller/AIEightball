@@ -17,8 +17,8 @@ An exercise using handlebars, MySQL, express, and Mvc.
 
 In order to buld your own version of this burger devouring app, you'll need the following node packages:
 
-* body_parser
-* express
-* express-handlebars
-* mysql
-* nodemon - not really necessary, but it makes the process a whole lot easier!
+* [body_parser](https://www.npmjs.com/package/body-parser)
+* [express](https://www.npmjs.com/package/express)
+* [express-handlebars](https://www.npmjs.com/package/express-handlebars)
+* [mysql](https://www.npmjs.com/package/mysql)
+* [nodemon](https://www.npmjs.com/package/nodemon) - not really necessary, but it makes the process a whole lot easier!
