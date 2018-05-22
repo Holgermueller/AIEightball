@@ -4,24 +4,20 @@
 <!--space for burgers-->
 <!--not eaten-->
 <h2>That looks tasty!</h2>
-
+<ul>
 {{#each burgers}}
-<p>{{burger_name}}
-    <button class="eat-burger" data-id="{{this.id}}">
-        EAT IT!!
-    </button>
-</p>
+{{#unless notDevoured}}
+{{> burgers/burger-block devoured=false}}
+{{/unless}}
 {{/each}}
+</ul>
 
 <br>
 <!--eaten-->
 <h2>That was goooood!</h2>
-
-{{#each burgers}}
-    {{#if devoured}}
-        {{>burgers/burger-block devoured=true}}
-    {{/if}}
-{{/each}}
+<ul>
+    {{#each burgers}} {{#if devoured}} {{>burgers/burger-block devoured=true}} {{/if}} {{/each}}
+</ul>
 
 <br>
 <!--form for creating burgers-->
