@@ -28,6 +28,7 @@ $(function () {
         let burgerNowDevoured = {
             devoured: 1
         };
+        $(this).parent().remove("li");
 
         //send PUT request
         $.ajax("/api/burgers/" + id, {
