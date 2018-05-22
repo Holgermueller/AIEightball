@@ -1,0 +1,27 @@
+{
+  "name": "Eat_a_burger",
+  "scripts": {
+  },
+  "env": {
+    "JAWSDB_BRONZE_URL": {
+      "required": true
+    },
+    "JAWSDB_URL": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "jawsdb",
+    "jawsdb"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
