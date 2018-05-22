@@ -30,7 +30,7 @@ function objToSql(ob) {
 let orm = {
     //selectAll()
     all: function (tableInput, cb) {
-        const queryString = "SELECT * FROM " + tableInput + ";";
+        let queryString = "SELECT * FROM " + tableInput + ";";
         connection.query(queryString, function (err, result) {
             if (err) {
                 throw err;
@@ -40,7 +40,7 @@ let orm = {
     },
     //insertOne()
     create: function (table, cols, vals, cb) {
-        const queryString = "INSERT INTO " + table;
+        let queryString = "INSERT INTO " + table;
         queryString += " (";
         queryString += cols.toString();
         queryString += ") ";
@@ -48,7 +48,7 @@ let orm = {
         queryString += printQuestionMarks(vals.length);
         queryString += ") ";
         console.log(queryString);
-        connection.query(queryString, vals(function (err, result) {
+        connection.query(queryString, vals, (function (err, result) {
             if (err) {
                 throw err;
             }
@@ -57,7 +57,7 @@ let orm = {
     },
     //updateOne()
     update: function (table, objColVals, condition, cb) {
-        const queryString = "UPDATE " + table;
+        let queryString = "UPDATE " + table;
         queryString += " SET ";
         queryString += objToSql(objColVals);
         queryString += " WHERE ";

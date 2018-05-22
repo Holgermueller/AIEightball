@@ -10,7 +10,7 @@ const burger = require('../models/burger.js');
 //GET request route
 router.get("/", function (req, res) {
     burger.all(function (data) {
-        const hbsObject = {
+        let hbsObject = {
             burgers: data
         };
         console.log(hbsObject.burgers[0].burger_name);
