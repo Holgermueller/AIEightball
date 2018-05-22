@@ -43,8 +43,20 @@ router.put("/api/burgers/:burger_id", function(req, res){
         } else {
             res.status(200).end();
         }
-    })
-})
+    });
+});
+
+//DELETE route
+router.delete("/api/burgers/:burger_id", function(req, res) {
+    let condition = "id = " + req.params.burger_id;
+    burger.delete(condition, function(result){
+        if (result.affectedRows == 0) {
+            return res.status(404).end();
+        } else {
+            res.status(200).end();
+        }
+    });
+});
 
 //export router
 module.exports = router;

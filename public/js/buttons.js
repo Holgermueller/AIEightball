@@ -43,7 +43,6 @@ $(function () {
 
     //DELETE function for eaten burgers
     $(".devoured").on("click", function(event){
-        $(this).parent().slideUp();
     });
 
     //no code below this line
