@@ -23,6 +23,7 @@ $(function(){
     });
 
     //function for devouring burgers
+    $(".")
 
     //no code below this line
 });
