@@ -18,13 +18,13 @@
   },
   "homepage": "https://github.com/Holgermueller/Eat_a_burger#readme",
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "dotenv": "^5.0.1",
-    "express": "^4.16.3",
-    "express-handlebars": "^3.0.0",
-    "mysql": "^2.15.0",
-    "nodemon": "^1.17.4",
-    "npm": "^6.13.4",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.3",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.3",
+    "npm": "^6.14.4",
     "require": "^2.4.20"
   }
 }
