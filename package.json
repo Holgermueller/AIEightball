@@ -24,7 +24,7 @@
     "express-handlebars": "^4.0.3",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.3",
-    "npm": "^6.14.4",
+    "npm": "^6.14.6",
     "require": "^2.4.20"
   }
 }
