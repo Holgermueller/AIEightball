@@ -1,0 +1,45 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto Mono", monospace;
+  height: 100vh;
+  background-color: #282828;
+  color: #00ff66;
+}
+
+h1 {
+  text-align: center;
+}
+
+.reply {
+  height: 50%;
+}
+
+.form-section {
+  display: grid;
+  place-items: center;
+  align-items: center;
+  width: 75%;
+  margin: auto;
+}
+textarea {
+  width: 95%;
+  margin: auto;
+}
+
+input[type="submit"] {
+  display: block;
+  font-size: 2rem;
+  padding: 8px;
+  border-radius: 5px;
+  margin: auto;
+}
+
+footer {
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  text-align: center;
+}

@@ -1,30 +1,19 @@
 {
-  "name": "eat_a_burger",
+  "name": "aieightball",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "description": "AI Eightball",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Holgermueller/Eat_a_burger.git"
+    "url": "git+https://github.com/Holgermueller/AIEightball.git"
   },
-  "author": "",
+  "author": "Holger Mueller",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Holgermueller/Eat_a_burger/issues"
+    "url": "https://github.com/Holgermueller/AIEightball/issues"
   },
-  "homepage": "https://github.com/Holgermueller/Eat_a_burger#readme",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "express-handlebars": "^5.3.1",
-    "mysql": "^2.18.1",
-    "nodemon": "^2.0.3",
-    "npm": "^6.14.6",
-    "require": "^2.4.20"
-  }
+  "homepage": "https://github.com/Holgermueller/AIEightball#readme"
 }
