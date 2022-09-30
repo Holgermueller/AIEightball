@@ -4,7 +4,7 @@
   "description": "AI Eightball",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postcss:watch": "postcss styles.css --dir public --watch"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/Holgermueller/AIEightball/issues"
   },
-  "homepage": "https://github.com/Holgermueller/AIEightball#readme"
+  "homepage": "https://github.com/Holgermueller/AIEightball#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "cssnano": "^5.1.13",
+    "postcss": "^8.4.16",
+    "postcss-cli": "^10.0.0"
+  }
 }

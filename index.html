@@ -10,16 +10,18 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="public/styles.css" />
     <title>AI Eightball</title>
   </head>
   <body>
-    <h1>What is your question, meat bag?</h1>
+    <header>
+      <h1>What is your question, meat bag?</h1>
+    </header>
 
-    <div class="reply"></div>
+    <div id="reply" class="reply"></div>
 
     <div class="form-section">
-      <form action="">
+      <form>
         <textarea
           name="user-question"
           id="userQuestion"
@@ -27,10 +29,17 @@
           rows="10"
         ></textarea>
 
-        <input type="submit" value="Submit" />
+        <input
+          onclick="getResponse()"
+          id="submit"
+          type="submit"
+          value="Submit"
+        />
       </form>
     </div>
 
     <footer>&copy; 2022 Holger Mueller</footer>
+
+    <script src="index.js"></script>
   </body>
 </html>

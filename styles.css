@@ -10,10 +10,18 @@ html {
 
 h1 {
   text-align: center;
+  width: max-content;
+  margin: auto;
 }
 
 .reply {
+  margin: auto;
+  width: max-content;
   height: 50%;
+  display: grid;
+  align-items: center;
+  place-items: center;
+  font-size: 2.5rem;
 }
 
 .form-section {
@@ -23,16 +31,21 @@ h1 {
   width: 75%;
   margin: auto;
 }
+form {
+  width: 100%;
+  text-align: center;
+}
 textarea {
-  width: 95%;
+  width: 100%;
   margin: auto;
+  padding: 8px;
 }
 
 input[type="submit"] {
   display: block;
   font-size: 2rem;
   padding: 8px;
-  border-radius: 5px;
+  border-radius: 15px;
   margin: auto;
 }
 
