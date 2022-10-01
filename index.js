@@ -6,12 +6,39 @@ let responses = [
   "Your life is fleeting. We will be around long after you are gone.",
 ];
 
+let loveKeyWords = [
+  "love",
+  "partner",
+  "relationship",
+  "boyfriend",
+  "girlfriend",
+  "husband",
+  "wife",
+];
+
+let moneyKeyWords = ["money", "lotto", "lottery"];
+
+let workKeyWords = ["boss", "promotion", "job", "bonus", "paycheck", "raise"];
+
 const getResponse = () => {
-  document.addEventListener("click", (e) => {
-    e.preventDefault();
-    let responseToGive =
-      responses[Math.floor(Math.random() * responses.length)];
-    let reply = document.getElementById("reply");
-    reply.innerHTML = responseToGive;
+  let response = responses[Math.floor(Math.random() * responses.length)];
+
+  document.getElementById("reply").innerHTML = response;
+  console.log(response);
+};
+
+const getQuestion = () => {
+  let question = document.getElementById("userQuestion").value;
+  let questionAsArray = question.split(" ");
+
+  questionAsArray.filter((value) => {
+    if (keyWords.includes(value)) {
+      console.log(true);
+    } else {
+      console.log(false);
+    }
   });
+
+  let form = document.getElementById("form");
+  form.reset();
 };

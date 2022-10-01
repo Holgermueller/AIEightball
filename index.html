@@ -21,7 +21,8 @@
     <div id="reply" class="reply"></div>
 
     <div class="form-section">
-      <form>
+      <form id="form">
+        <label for="user-question">Type your query here:</label>
         <textarea
           name="user-question"
           id="userQuestion"
@@ -30,9 +31,9 @@
         ></textarea>
 
         <input
-          onclick="getResponse()"
+          onclick="getQuestion()"
           id="submit"
-          type="submit"
+          type="button"
           value="Submit"
         />
       </form>
