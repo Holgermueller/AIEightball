@@ -1,17 +1,60 @@
+:root {
+  --background-color: #282828;
+  --header-typewriter-chars: 32;
+  --header-typewriter-speed: 6s;
+}
+
 body,
 html {
   padding: 0;
   margin: 0;
   font-family: "Roboto Mono", monospace;
   height: 100vh;
-  background-color: #282828;
+  background-color: var(--background-color);
   color: #00ff66;
 }
 
 h1 {
   text-align: center;
   width: max-content;
-  margin: auto;
+  margin: 1% auto;
+  position: relative;
+}
+
+h1::before,
+h1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+h1::before {
+  background: var(--background-color);
+  animation: typewriter var(--header-typewriter-speed)
+    steps(var(--header-typewriter-chars)) 1s forwards;
+}
+
+h1::after {
+  width: 0.25rem;
+  background: #00ff66;
+  animation: typewriter var(--header-typewriter-speed)
+      steps(var(--header-typewriter-chars)) 1s forwards,
+    blink 750ms steps(var(--header-typewriter-chars)) infinite;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
 }
 
 .reply {
