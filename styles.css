@@ -68,21 +68,77 @@ h1::after {
   text-align: center;
 }
 
+#reply {
+  position: relative;
+}
+
+.calc-reply {
+  position: absolute;
+}
+
 .form-section {
   display: grid;
   place-items: center;
-  align-items: center;
-  width: 75%;
+  width: 70%;
   margin: auto;
+  position: relative;
 }
+
+.form-section::before,
+.form-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.form-section::before {
+  background: var(--background-color);
+  animation: form-appear 6s 1 6s forwards;
+}
+
+.form-section::after {
+  height: 0.25rem;
+  background: transparent;
+  animation: form-appear 6s 1 6s forwards,
+    line-appear-disappear 6s 1 6s forwards;
+}
+
+@keyframes form-appear {
+  to {
+    top: 100%;
+  }
+}
+
+@keyframes line-appear-disappear {
+  0% {
+    background: transparent;
+  }
+
+  1% {
+    background: #00ff66;
+  }
+
+  99% {
+    background: #00ff66;
+  }
+  100% {
+    background: transparent;
+  }
+}
+
 form {
-  width: 100%;
+  width: 90%;
   text-align: center;
 }
+
 textarea {
   width: 100%;
   margin: auto;
   padding: 8px;
+  border-radius: 15px;
 }
 
 input[type="button"] {
