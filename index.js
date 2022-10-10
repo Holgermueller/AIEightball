@@ -24,13 +24,35 @@ let healthKeyWords = [
 
 const validateForm = () => {
   let question = document.getElementById("userQuestion").value;
+  document.getElementById("reply").innerHTML = "";
 
   if (question === "") {
-    document.getElementById("reply").innerHTML =
-      "You have to type your question. I cannot read your mind.";
+    showProcessing();
+
+    setTimeout(() => {
+      hideProcessing();
+
+      document.getElementById("reply").innerHTML =
+        "You have to type your question, human. I cannot read your mind.";
+    }, 3000);
   } else {
-    getQuestion();
+    showProcessing();
+
+    setTimeout(() => {
+      hideProcessing();
+      getQuestion();
+    }, 3000);
   }
+};
+
+const showProcessing = () => {
+  const proc = document.getElementById("calcReply");
+  proc.style.display = "block";
+};
+
+const hideProcessing = () => {
+  const proc = document.getElementById("calcReply");
+  proc.style.display = "none";
 };
 
 const getQuestion = () => {
@@ -59,3 +81,5 @@ const getQuestion = () => {
   let form = document.getElementById("form");
   form.reset();
 };
+
+hideProcessing();
