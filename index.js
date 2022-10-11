@@ -29,19 +29,42 @@ const validateForm = () => {
   if (question === "") {
     showProcessing();
 
+    fillProgressBar();
+
     setTimeout(() => {
       hideProcessing();
 
       document.getElementById("reply").innerHTML =
         "You have to type your question, human. I cannot read your mind.";
-    }, 3000);
+    }, 14000);
   } else {
     showProcessing();
+
+    fillProgressBar();
 
     setTimeout(() => {
       hideProcessing();
       getQuestion();
-    }, 3000);
+    }, 14000);
+  }
+};
+
+let i = 0;
+const fillProgressBar = () => {
+  if (i == 0) {
+    i = 1;
+    const progressBar = document.getElementById("progressBar");
+    let width = 1;
+    let id = setInterval(frame, 140);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        progressBar.style.width = width + "%";
+      }
+    }
   }
 };
 
@@ -82,4 +105,4 @@ const getQuestion = () => {
   form.reset();
 };
 
-hideProcessing();
+//hideProcessing();

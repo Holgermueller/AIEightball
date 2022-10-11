@@ -59,7 +59,7 @@ h1::after {
 
 .reply {
   margin: auto;
-  width: 95%;
+  width: 90%;
   height: 50%;
   display: grid;
   place-items: center;
@@ -74,6 +74,21 @@ h1::after {
 
 .calc-reply {
   position: absolute;
+  width: 80%;
+  background-color: gray;
+  border-radius: 15px;
+}
+
+#progressBar {
+  width: 1%;
+  border-radius: 15px;
+  height: 2.5rem;
+  background-color: #00ff66;
+  color: var(--background-color);
+}
+
+#progressBar > div {
+  text-align: center;
 }
 
 .form-section {
